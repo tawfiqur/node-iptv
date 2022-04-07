@@ -1,0 +1,44 @@
+{
+  "name": "node-iptv",
+  "version": "1.0.0",
+  "description": "A simple IPTV",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawfiqur/node-iptv.git"
+  },
+  "keywords": [],
+  "author": "Tawfiqur Rahman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tawfiqur/node-iptv/issues"
+  },
+  "homepage": "https://github.com/tawfiqur/node-iptv#readme",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.13",
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "del": "^3.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "hls-server": "^1.2.2",
+    "i18n": "^0.8.3",
+    "my-ip": "^1.1.1",
+    "public-ip": "^2.4.0",
+    "rtmp-server": "^0.2.0",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
+  }
+}

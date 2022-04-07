@@ -1,0 +1,295 @@
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+input {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  min-width: 320px;
+}
+
+/* Login Page */
+
+.login.page {
+  background-color: #000;
+}
+
+.loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 50em;
+  transform: translate(-60%, -50%);
+  text-align: right;
+}
+
+.submit,
+.loginForm .usernameInput {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding: 15px;
+  text-align: left;
+  margin-left: 2rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+.submit {
+  background-color: #fff;
+  color: #000;
+  width: auto;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 200%;
+}
+
+.usernameInput {
+  font-size: 200%;
+  letter-spacing: 3px;
+}
+
+.title,
+.usernameInput {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Chat page */
+.chat.page {
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  width: 320px;
+  z-index: 3;
+}
+
+.show-chat .chat.page {
+  transform: translateX(0%);
+}
+
+/* Font */
+.messages {
+  background: #fff;
+  font-size: 100%;
+}
+
+.toolbar {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  z-index: 4;
+
+  display: none;
+  padding: 0.5rem;
+}
+
+.toolbarButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.5em 0.7rem;
+}
+
+.inputMessage {
+  font-size: 100%;
+}
+
+.log {
+  color: gray;
+  font-size: 70%;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages */
+
+.chatArea {
+  height: 100%;
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px 10px 20px;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* Input */
+
+.inputMessage {
+  border: 10px solid #000;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  outline: none;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+/* Video */
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #394039;
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.show-chat .main {
+  width: calc(100% - 320px);
+  transition: transform 0.3s ease-in-out, width 0s 0.3s linear;
+  transform: translateX(320px);
+}
+
+.adminView {
+  display: none;
+  background: whitesmoke;
+  font-weight: normal;
+  padding: 3rem;
+  font-size: 3rem;
+}
+
+.adminView.visible {
+  display: block;
+}
+
+.video-js {
+  width: 100%;
+  height: 100%;
+}
+
+/* Loader */
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #82ffd8;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.video-js .vjs-big-play-button {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}

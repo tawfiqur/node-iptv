@@ -1,0 +1,31 @@
+{
+  "streamKey": "live",
+  "videosPath": "./public/videos/",
+  "hls": {
+    "bufsize": "1835k",
+    "input": "rtmp://localhost/live/",
+    "maxrate": "400k",
+    "numberOfTries": 4,
+    "delayOfTries": 2000,
+    "output": "output.m3u8"
+  },
+  "maxBuffer": 5120,
+  "passwords": [
+    {
+      "name": "Admin",
+      "password": "root"
+    },
+    {
+      "name": "room1",
+      "password": "room1"
+    },
+    {
+      "name": "room2",
+      "password": "room2"
+    },
+    {
+      "name": "room3",
+      "password": "room3"
+    }
+  ]
+}
